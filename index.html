@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Cat Clicker</h1>
+
+
+<div id="cat">
+<img src="https://r.hswstatic.com/w_907/gif/tesla-cat.jpg" id="catImage" />
+<div id="count"></div>
+</div>
+
+<script type="text/javascript">
+    let clickCount = 0;
+    
+  var catContainer = document.querySelector('#cat');
+  var img = document.querySelector('#catImage');
+   var clickCounter = document.querySelector('#count');
+   
+   clickCounter.innerHTML = `Cat has been clicked ${clickCount} times`;
+   
+  
+  img.addEventListener('click', updateClicks);
+    
+    
+    function updateClicks(){
+        clickCount ++;
+        clickCounter.innerHTML = `Cat has been clicked ${clickCount} times`;
+    }
+    
+</script>
+
+
+</body>
+</html>
